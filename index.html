@@ -3,16 +3,33 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>template Vue</title>
+        <title>Vue Email List</title>
 
         <!-- css  -->
-         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         
-        <div id="app">{{ message }}</div>
+        <div id="app">
+            
+            <h1>
+                {{ message }}
+            </h1>
+            
+            <h3>
+                questa è l'email che ha scelto boolean per te :
+            </h3>
+            
+            <ul>
+                <li v-for="address in emails">
+                    {{ address }}
+                </li>
+            </ul>
+        </div>
         
         
+        <!-- js  -->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script type="text/javascript" src="js/scripts.js"></script>
     </body>
