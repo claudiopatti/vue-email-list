@@ -11,20 +11,22 @@
     <body>
         
         <div id="app">
+            <div class="container">
+                <h1>
+                    {{ message }}
+                </h1>
+                
+                <h3>
+                    questa è l'email che ha scelto boolean per te :
+                </h3>
+                
+                <ul v-if="emails.length == 10">
+                    <li v-for="address in emails">
+                        {{ address }}
+                    </li>
+                </ul>
+            </div>
             
-            <h1>
-                {{ message }}
-            </h1>
-            
-            <h3>
-                questa è l'email che ha scelto boolean per te :
-            </h3>
-            
-            <ul>
-                <li v-for="address in emails">
-                    {{ address }}
-                </li>
-            </ul>
         </div>
         
         
